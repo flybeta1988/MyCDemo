@@ -1,9 +1,5 @@
 #include <stdio.h>
-
-int Add (int a, int b)
-{
-	return (a + b);
-}
+#include "lib/demo.h"
 
 int main ()
 {
@@ -13,9 +9,11 @@ int main ()
 
 	scanf("%d%d", &c, &d);
 
-	sum = Add(c, d);
+	sum = add(c, d);
+	c = foo(d);
 
 	printf("sum = %d\n", sum);
+	printf("foo = %d\n", c);
 
 	return 0;
 }
